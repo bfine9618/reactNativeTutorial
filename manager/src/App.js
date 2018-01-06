@@ -4,33 +4,27 @@ import { createStore, applyMiddleware } from 'redux';
 import firebase from 'firebase';
 import ReduxThunk from 'redux-thunk';
 import reducers from './reducers';
-//import Router from './Router';
-import LoginForm from './components/LoginForm';
-
+import Router from './Router';
 
 class App extends Component {
-
   componentWillMount() {
-    firebase.initializeApp(
-      {
-        apiKey: 'AIzaSyA8Ymkdcg0SWPMLGBLLOJgJOLys58DXo4c',
-        authDomain: 'manager-835ce.app.com',
-        databaseURL: 'https://manager-835ce.io.com',
-        projectId: 'manager-835ce',
-        storageBucket: 'manager-835ce.appspot.com',
-        messagingSenderId: '752280314920'
-      }
-    );
+    const config = {
+      apiKey: 'AIzaSyBR4FTGiOcTZ5OBNi6thE0KhCDR3PaOtQM',
+      authDomain: 'manager-2328b.firebaseapp.com',
+      databaseURL: 'https://manager-2328b.firebaseio.com',
+      storageBucket: 'manager-2328b.appspot.com',
+      messagingSenderId: '193075244299'
+    };
+
+    firebase.initializeApp(config);
   }
 
   render() {
-    const store = createStore(reducers,
-      {},
-      applyMiddleware(ReduxThunk));
+    const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
 
     return (
       <Provider store={store}>
-        <LoginForm />
+        <Router />
       </Provider>
     );
   }
