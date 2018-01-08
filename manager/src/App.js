@@ -9,11 +9,12 @@ import Router from './Router';
 class App extends Component {
   componentWillMount() {
     const config = {
-      apiKey: 'AIzaSyBR4FTGiOcTZ5OBNi6thE0KhCDR3PaOtQM',
-      authDomain: 'manager-2328b.firebaseapp.com',
-      databaseURL: 'https://manager-2328b.firebaseio.com',
-      storageBucket: 'manager-2328b.appspot.com',
-      messagingSenderId: '193075244299'
+      apiKey: 'AIzaSyA8Ymkdcg0SWPMLGBLLOJgJOLys58DXo4c',
+      authDomain: 'manager-835ce.firebaseapp.com',
+      databaseURL: 'https://manager-835ce.firebaseio.com',
+      projectId: 'manager-835ce',
+      storageBucket: 'manager-835ce.appspot.com',
+      messagingSenderId: '752280314920'
     };
 
     firebase.initializeApp(config);
